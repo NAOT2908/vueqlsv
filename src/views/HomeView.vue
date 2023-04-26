@@ -12,7 +12,9 @@ export default {
   name: 'HomeView',
   components: {
     ModalStudents,
-    
-  }
+  },
+  mounted() {
+    console.log(this.$route.params.id);
+  },
 }
 </script>

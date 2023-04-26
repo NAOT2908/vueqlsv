@@ -1,7 +1,7 @@
 <template>
   <nav>
-    <router-link to="/">Danh sách sinh viên</router-link> |
-    <router-link to="/about">Tìm kiếm</router-link> |
+    <router-link to="/home">Chỉnh sửa</router-link> |
+    <router-link to="/about">Danh sách sinh viên</router-link> |
     <router-link to="/error">Error</router-link>
   </nav>
   <router-view/>

@@ -67,7 +67,11 @@
                     </td>
                     <td class="px-6 py-4 pl-10 ">
                         <button type="button" @click="editStudent(student)"
-                            class="text-white bg-blue-700 hover:bg-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Sửa</button>
+                            class="text-white bg-blue-700 hover:bg-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+
+                            <!-- <router-link :to="`/home/${student.id}`">Sửa</router-link> -->
+                            Sửa
+                        </button>
                         <button type="button" @click="delStudent(student.id)"
                             class=" text-white bg-red-700 hover:bg-red-500 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Xoá</button>
                     </td>
@@ -130,8 +134,9 @@ export default {
             }
         },
         editStudent(student) {
-            // emit sự kiện 'update-student' với giá trị student được truyền vào
+            // emit sự kiện 'editstudent' với giá trị student được truyền vào
             this.$emit('editStudent', student);
+            this.$route.id
             console.log(student)
         },
         updateTable(updateStudent) {

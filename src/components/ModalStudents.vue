@@ -17,7 +17,7 @@
         </div>
     </form>
     <div class="formsv">
-        <div class="forminput">
+        <div class="forminput"> 
             <form class="form1 bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4  ">
                 <div class="mb-4 px-2 w-full">
                     <label class="block mb-1 text-sm " for="input1">Mã sinh viên:</label>
@@ -167,12 +167,25 @@ export default {
             this.Name = student.name;
             this.Datetime = student.date;
             this.Faculty = student.faculty;
+
         },
         onSeacrh() {
 
             this.$refs.child.searchStudent(this.searchip);
         }
     },
+    // mounted() {
+    //     console.log(this.$route.params.id);
+    //     this.Id = this.$route.params.id;
+    //     const liststudent = localStorage.getItem('students') ? JSON.parse(localStorage.getItem('students')).find((item) => item.id === this.$route.params.id) : []
+    //     console.log(liststudent);
+    //     this.Name = liststudent.name;
+    //     this.Datetime = liststudent.date;
+    //     this.gender = liststudent.gender;
+    //     this.Faculty = liststudent.faculty;
+
+
+    // },
 
 }
 
@@ -183,10 +196,11 @@ export default {
     color: red;
     font-size: medium;
     display: flex;
-    
+
 
 }
-.formsv > .forminput {
+
+.formsv>.forminput {
     width: 500px;
     border-right: 1px solid #ccc;
     border-radius: 1px;
